@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Site Yönetimi Takip</string>
+    <string name="block"><u>Blok</u></string>
+    <string name="apartment_number"><u>Daire</u></string>
+</resources>

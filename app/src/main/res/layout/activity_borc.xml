@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.BorcActivity"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:id="@+id/block_number_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp"
+        android:paddingTop="20sp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/block"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:selectAllOnFocus="false"
+            android:linksClickable="false"
+            android:autoLink="all"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/apartment_number"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:selectAllOnFocus="false"
+            android:linksClickable="false"
+            android:autoLink="all"
+            android:layout_marginLeft="20sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/take_numbers_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/block_number_linear_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:paddingLeft="20sp"
+        android:paddingRight="20sp">
+
+        <EditText
+            android:id="@+id/block_number_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Blok"
+            android:textSize="20sp"
+            android:layout_weight="1"/>
+
+        <EditText
+            android:id="@+id/apartment_number_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daire"
+            android:textSize="20sp"
+            android:paddingLeft="20sp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/sorgula_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/button_color"
+            android:text="Sorgula"
+            android:layout_weight="2" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aidat_ekle_kiracı_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/take_numbers_linear_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="200dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/aidat_kiracı_miktarı_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aidat Miktarı (Kiracı)"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/aidat_kiracı_ekle_buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aidat Ekle"
+            android:layout_weight="2"
+            android:backgroundTint="@color/button_color"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/aidat_ekle_ev_sahibi_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/aidat_ekle_kiracı_linear_layout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/aidat_ev_sahibi_miktarı_edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aidat Miktarı (Ev Sahibi)"
+            android:textSize="15sp"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/aidat_ekle_buton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aidat Ekle"
+            android:layout_weight="2"
+            android:backgroundTint="@color/button_color"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/yuzde_bes_borc_ekle_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/aidat_ekle_ev_sahibi_linear_layout"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="20sp"
+        android:text="%5 Gecikme Borcu Ekle"
+        android:backgroundTint="@color/button_color" />
+</androidx.constraintlayout.widget.ConstraintLayout>
